@@ -16,3 +16,14 @@ Route::get('/', function () {
 });
 
 Route::get('/admin', 'AdminController@dashboard');
+Route::get('/admin/profile', 'AdminController@profile');
+Route::get('/admin/users', 'AdminController@users');
+Route::get('/admin/users/all', 'AdminController@usersAll');
+Route::post('/admin/users/add', 'AdminController@addUser');
+Route::post('/admin/users/send/registration', 'AdminController@userRegistrationMail');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+
+Route::get('/alltables', 'HomeController@alltables');

@@ -27,7 +27,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/admin';
 
     /**
      * Create a new controller instance.
@@ -64,6 +64,9 @@ class RegisterController extends Controller
     {
         return User::create([
             'name' => $data['name'],
+            'thumbnail' => '/cms-templates/light-bootstrap-dashboard-master/assets/img/faces/no-profile-img.gif',
+            'surname' => $data['surname'],
+            'permissions' => '',
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);

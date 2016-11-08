@@ -1,14 +1,17 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="basarApp">
 <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/png" href="/cms-templates/light-bootstrap-dashboard-master/assets/img/favicon.ico">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>Light Bootstrap Dashboard by Creative Tim</title>
 
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
+
+    <script src="/bower_components/angular/angular.min.js"></script>
 
 
     <!-- Bootstrap core CSS     -->
@@ -42,6 +45,7 @@
 
         <div class="content">
             <div class="container-fluid">
+                @yield('content')
             </div>
         </div>
 
@@ -81,16 +85,18 @@
 
         demo.initChartist();
 
-        $.notify({
+        /*$.notify({
             icon: 'pe-7s-gift',
             message: "Welcome to <b>Light Bootstrap Dashboard</b> - a beautiful freebie for every web developer."
 
         },{
             type: 'info',
             timer: 4000
-        });
+        });*/
 
     });
 </script>
+
+<script src="/cms-templates/light-bootstrap-dashboard-master/assets/js/app.js"></script>
 
 </html>
