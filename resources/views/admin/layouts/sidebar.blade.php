@@ -10,23 +10,34 @@
     <div class="sidebar-wrapper">
         <div class="logo">
             <a href="/admin" class="simple-text">
-                BASAR (ADMIN PANEL)
+                BASAR
             </a>
         </div>
 
         <ul class="nav">
-            <li class="active">
+            <li>
                 <a href="/admin">
                     <i class="pe-7s-graph"></i>
                     <p>Панель управления</p>
                 </a>
             </li>
-            <li>
-                <a href="/admin/users">
-                    <i class="pe-7s-user"></i>
-                    <p>Профили</p>
-                </a>
-            </li>
+            @if(Auth::user()->is_admin)
+                <li>
+                    <a href="/admin/users">
+                        <i class="pe-7s-user"></i>
+                        <p>Пользователи</p>
+                    </a>
+                </li>
+            @endif
+            @if(Auth::user()->is_active)
+                <li>
+                    <a href="/admin/tables">
+                        <i class="pe-7s-note2"></i>
+                        <p>Таблицы</p>
+                    </a>
+                </li>
+            @endif
+
         </ul>
     </div>
 </div>

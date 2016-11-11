@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap Login &amp; Register Templates</title>
+    <title>Панель управления | Basar</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
@@ -40,14 +40,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-8 col-sm-offset-2 text">
-                    <h1><strong>Bootstrap</strong> Login &amp; Register Forms</h1>
-                    <div class="description">
-                        <p>
-                            This is a free responsive <strong>"login and register forms"</strong> template made with Bootstrap.
-                            Download it on <a href="http://azmind.com" target="_blank"><strong>AZMIND</strong></a>,
-                            customize and use it as you like!
-                        </p>
-                    </div>
+                    <h1><strong>Панель управления</strong> {{--Login &amp; Register Forms--}}</h1>
+                    <div class="description"></div>
                 </div>
             </div>
 
@@ -65,8 +59,7 @@
 
             <div class="col-sm-8 col-sm-offset-2">
                 <div class="footer-border"></div>
-                <p>Made by Anli Zaimi at <a href="http://azmind.com" target="_blank"><strong>AZMIND</strong></a>
-                    having a lot of fun. <i class="fa fa-smile-o"></i></p>
+                <p>Сделано командой <a href="http://qube.kz" target="_blank"><strong>Qube.kz</strong></a> <i class="fa fa-smile-o"></i></p>
             </div>
 
         </div>

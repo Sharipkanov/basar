@@ -1,7 +1,7 @@
 @extends('admin.index')
 
 @section('content')
-<div ng-controller="users">
+<div ng-controller="users" ng-init="getUsers()">
     <div class="row">
         <div class="col-md-8">
             <div class="card">
@@ -13,16 +13,22 @@
                     <table class="table table-hover table-striped">
                         <thead>
                         <tr>
-                            <th>ID</th>
                             <th>ФИО</th>
                             <th>Email</th>
+                            <th class="text-center">Статус</th>
+                            <th></th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr ng-repeat="(key, value) in users">
-                            <td>[[value.id]]</td>
-                            <td>[[value.name]] [[$user.surname]]</td>
+                            <td><a href="/admin/profile/[[value.email]]">[[value.name]] [[value.surname]]</a></td>
                             <td>[[value.email]]</td>
+                            <td ng-if="value.is_active === 1" class="text-center"><div class="circle circle-green"></div></td>
+                            <td ng-if="value.is_active === 0" class="text-center"><div class="circle circle-red"></div></td>
+                            <td class="text-center">
+                                <a href="/admin/profile/[[value.email]]" class="btn btn-primary btn-small">Редактировать</a>
+                                <button type="button" class="btn btn-danger btn-small" ng-click="removeUser([[value.email]])">Удалить</button>
+                            </td>
                         </tr>
                         </tbody>
                     </table>

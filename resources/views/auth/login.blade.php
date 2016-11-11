@@ -7,8 +7,8 @@
         <div class="form-box">
             <div class="form-top">
                 <div class="form-top-left">
-                    <h3>Login to our site</h3>
-                    <p>Enter username and password to log on:</p>
+                    <h3>Авторизация</h3>
+                    <p>Введите данные для входа в систему</p>
                 </div>
                 <div class="form-top-right">
                     <i class="fa fa-lock"></i>
@@ -18,7 +18,7 @@
                 <form role="form" method="POST" action="{{ url('/login') }}" class="login-form">
                     {{ csrf_field() }}
                     <div class="form-group">
-                        <label class="sr-only" for="form-email">Username</label>
+                        <label class="sr-only" for="form-email">Email</label>
                         <input type="email" name="email" placeholder="Email" class="form-username form-control" id="form-email" value="{{ old('email') }}" required>
                         @if ($errors->has('email'))
                             <div>
